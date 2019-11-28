@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>shop our store!</title>
-	
+	 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
 	<style type="text/css">
 		.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -37,15 +38,15 @@
 <body>
 	<a href="{{url_for('home')}}">home page</a>
  <div class="card">
-  <img src="csnake.jpg" alt="snake" style="width:100%">
+ <img src="{{url_for('static', filename='csnake.jpg')}}" style="width: 100%"/>
   <h1>SNAKE</h1>
   <p class="price">$19.99</p>
   <p>this is top quality snake</p>
-  <p><button>Add to Cart</button></p>
+  <p><a href = "{{url_for('cart')}}"><button>Add to Cart</button></a></p>
 </div>
 
 <div class="card">
-  <img src="snake.jpg" alt="another snake" style="width:100%">
+ <img src="{{url_for('static', filename='snake.jpg')}}" style="width: 100%"/>
   <h1>SNAKEsss</h1>
   <p class="price">$19.69</p>
   <p>this is low quality snake</p>
