@@ -11,7 +11,7 @@ class Product:
         self.picturelink = picturelink
         self.discription = discription
 
-Base = declarative_base()
+
 
 
 class Product(Base):
